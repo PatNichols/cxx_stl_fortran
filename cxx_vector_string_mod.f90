@@ -46,13 +46,13 @@ module cxx_vector_string_mod
 		end subroutine
 		subroutine cxx_vector_string_c_set(p,i,v) bind(C,name="cxx_vector_string_c_set")
 			import c_ptr,c_int64_t
-			type(c_ptr) :: p
+			type(c_ptr),value :: p
 			integer(c_int64_t),value :: i
 			type(c_ptr),value :: v
 		end subroutine		
 		subroutine cxx_vector_string_c_set_str(p,i,v) bind(C,name="cxx_vector_string_c_set_str")
 			import c_ptr,c_int64_t
-			type(c_ptr) :: p
+			type(c_ptr),value :: p
 			integer(c_int64_t),value :: i
 			type(c_ptr),value :: v
 		end subroutine		

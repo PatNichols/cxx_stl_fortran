@@ -34,7 +34,9 @@ contains
 		fsz = len_trim(fstr,int64)
 		csz = fsz + 1
 		if ( fsz > n) then
-			call c_free(cstr_ptr)
+			if ( c_associated(cstr_ptr) ) then
+				call c_free(cstr_ptr)
+			end if
 			cstr_ptr = c_alloc(csz)
 			n = fsz			
 		end if

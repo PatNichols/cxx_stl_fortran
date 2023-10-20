@@ -3,9 +3,9 @@ program f_c_string_test
 	use,intrinsic :: iso_fortran_env
 	use :: f_c_string_mod
 	implicit none
-	type(c_ptr) :: s1
-	type(c_ptr) :: s2
-	type(c_ptr) :: s3
+	type(c_ptr) :: s1 = c_null_ptr
+	type(c_ptr) :: s2 = c_null_ptr
+	type(c_ptr) :: s3 = c_null_ptr
 	character(len=129) :: test1
 	character(len=129) :: test2
 	character(len=129) :: test3
